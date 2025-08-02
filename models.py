@@ -9,3 +9,4 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)  # Store hashed passwords for security
     is_active = Column(Integer, default=1)  # 1 for active, 0 for inactive
+    is_superuser = Column(Integer, default=0)  # 1 for superuser, 0 for regular user
